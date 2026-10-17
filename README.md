@@ -37,3 +37,15 @@ The APK lands in `app/build/outputs/apk/debug/app-debug.apk`.
   GIFs this looks fine; bump the frame count if motion looks choppy.
 - Icon Grid Creator stretches each source image to fill its cell — crop/pad icons to
   square beforehand if you want them undistorted.
+
+
+## Updated project changes
+
+- Bulk rename now clears row selections and the Select All checkbox after Apply.
+- The frame list uses normal RecyclerView scrolling without a staggered layout animation that can make long lists appear incomplete on slower phones. Image import closes each input stream safely.
+- Packing inputs are staged as private files and processed by WorkManager with a foreground notification. The job can continue or be rescheduled after the app process is killed; the PNG/XML pair is written through temporary files with rollback backups.
+- Added **SpriteSheet Editor**: select an existing PNG atlas and TextureAtlas XML, optionally add more PNG images, extract the existing frames, then rename/add frames and rebuild a fresh atlas with regenerated XML coordinates. Rotated atlas frames are currently rejected with an explicit message rather than silently corrupted.
+
+### Build
+
+GitHub Actions builds the debug APK artifact named `ZenFNFToolkit-debug`. From Termux, after cloning the repository, run `gradle wrapper --gradle-version 8.7` if the wrapper is not present, then `./gradlew assembleDebug`.

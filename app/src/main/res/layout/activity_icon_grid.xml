@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bw_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvHeader"
+            style="@style/ZenHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Icon Creator"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/tvBody"
+            style="@style/ZenBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick an image — it'll be center-cropped to a square and scaled to the size you set."
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btnPickIcons"
+            style="@style/ZenButtonOutline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Image" />
+
+        <ImageView
+            android:id="@+id/ivIconPreview"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bw_thumb_bg"
+            android:visibility="gone" />
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@drawable/bw_hairline" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" />
+
+        <EditText
+            android:id="@+id/etCellSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Icon size (px, e.g. 150)"
+            android:text="150"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etOutputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Output file name (no extension)"
+            android:text="icon" />
+
+        <Button
+            android:id="@+id/btnConvert"
+            style="@style/ZenButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Create Icon" />
+
+        <TextView
+            android:id="@+id/tvSavedInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/bw_grey"
+            android:fontFamily="monospace"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>
