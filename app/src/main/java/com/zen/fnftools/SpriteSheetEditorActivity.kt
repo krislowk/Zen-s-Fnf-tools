@@ -1,5 +1,6 @@
 package com.zen.fnftools
 
+import android.graphics.Bitmap
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
