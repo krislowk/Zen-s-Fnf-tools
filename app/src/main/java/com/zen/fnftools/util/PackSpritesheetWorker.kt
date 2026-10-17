@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory
 import android.util.Base64
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.content.pm.ServiceInfo
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.work.ForegroundInfo
@@ -120,7 +121,11 @@ class PackSpritesheetWorker(context: Context, params: WorkerParameters) : Corout
             .setOnlyAlertOnce(true)
             .setProgress(0, 0, true)
             .build()
-        return ForegroundInfo(7041, notification)
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            ForegroundInfo(7041, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC)
+        } else {
+            ForegroundInfo(7041, notification)
+        }
     }
 }
 
