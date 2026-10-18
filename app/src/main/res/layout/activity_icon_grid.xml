@@ -23,25 +23,62 @@
             style="@style/ZenBody"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pick an image — it'll be center-cropped to a square and scaled to the size you set."
+            android:text="Pick a normal icon and a losing icon. They get placed side by side on one PNG (2 x size wide, 1 x size tall, e.g. 300 x 150)."
             android:layout_marginBottom="20dp" />
 
-        <Button
-            android:id="@+id/btnPickIcons"
-            style="@style/ZenButtonOutline"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pick Image" />
+            android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/ivIconPreview"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:scaleType="centerCrop"
-            android:background="@drawable/bw_thumb_bg"
-            android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+
+                <Button
+                    android:id="@+id/btnPickNormal"
+                    style="@style/ZenButtonOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Normal Icon" />
+
+                <ImageView
+                    android:id="@+id/ivNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/bw_thumb_bg"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <Button
+                    android:id="@+id/btnPickLosing"
+                    style="@style/ZenButtonOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Losing Icon" />
+
+                <ImageView
+                    android:id="@+id/ivLosing"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/bw_thumb_bg"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
 
         <View android:layout_width="match_parent" android:layout_height="1dp"
             android:background="@drawable/bw_hairline" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" />
@@ -50,7 +87,7 @@
             android:id="@+id/etCellSize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Icon size (px, e.g. 150)"
+            android:hint="Size of ONE icon (px, e.g. 150 = 300 x 150 output)"
             android:text="150"
             android:inputType="number" />
 
@@ -60,7 +97,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Output file name (no extension)"
-            android:text="icon" />
+            android:text="icon-custom" />
+
+        <CheckBox
+            android:id="@+id/cbCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Crop to fill (otherwise fit whole image)"
+            android:textColor="@color/bw_grey" />
 
         <Button
             android:id="@+id/btnConvert"
@@ -69,6 +114,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Create Icon" />
+
+        <ImageView
+            android:id="@+id/ivIconPreview"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bw_thumb_bg"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tvSavedInfo"
