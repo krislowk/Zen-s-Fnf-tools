@@ -1,13 +1,16 @@
 <resources>
-    <color name="bw_black">#10131F</color>
-    <color name="bw_near_black">#14172A</color>
-    <color name="bw_panel">#1B2036</color>
-    <color name="bw_white">#F2F4FF</color>
-    <color name="bw_off_white">#C7CEFF</color>
-    <color name="bw_grey">#8B92B8</color>
-    <color name="bw_grey_dim">#4B5178</color>
-    <color name="bw_hairline">#262B45</color>
+    <color name="bw_black">#121214</color>
+    <color name="bw_near_black">#17181B</color>
+    <color name="bw_panel">#1E1F24</color>
+    <color name="bw_surface">#2A2B35</color>
+    <color name="bw_surface_high">#363746</color>
+    <color name="bw_white">#ECEDF5</color>
+    <color name="bw_off_white">#C9CADB</color>
+    <color name="bw_grey">#A3A5BA</color>
+    <color name="bw_grey_dim">#6E7086</color>
+    <color name="bw_hairline">#2E2F3A</color>
 
-    <color name="fnf_accent">#8FA6FF</color>
-    <color name="fnf_accent_dark">#3355DD</color>
+    <color name="fnf_accent">#3D7BFF</color>
+    <color name="fnf_accent_dark">#2A62DB</color>
+    <color name="fnf_on_accent">#FFFFFF</color>
 </resources>
