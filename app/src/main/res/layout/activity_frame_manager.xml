@@ -8,37 +8,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:paddingTop="40dp">
 
         <TextView
             android:id="@+id/tvHeader"
             style="@style/ZenHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rename Frames"
-            android:layout_marginBottom="4dp" />
+            android:layout_marginBottom="6dp"
+            android:text="Rename Frames" />
 
         <TextView
             style="@style/ZenBody"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tap any name to edit it. This is exactly what ends up in the XML."
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:text="Tap any name to edit it. This is exactly what ends up in the XML." />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bw_card_bg"
             android:gravity="center_vertical"
-            android:layout_marginBottom="12dp">
+            android:orientation="horizontal"
+            android:padding="12dp">
 
             <CheckBox
                 android:id="@+id/cbSelectAll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:text="All"
-                android:textColor="@color/bw_grey"
-                android:layout_marginEnd="12dp" />
+                android:textColor="@color/bw_grey" />
 
             <EditText
                 android:id="@+id/etBulkPrefix"
@@ -50,60 +53,44 @@
 
             <Button
                 android:id="@+id/btnApplyBulk"
+                style="@style/ZenButtonSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Apply"
-                android:textAllCaps="true"
-                android:textColor="@color/bw_white"
-                android:background="@drawable/bw_button_outline_bg"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:stateListAnimator="@null" />
-
+                android:text="Apply" />
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@drawable/bw_hairline"
-            android:layout_marginBottom="8dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvFrames"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:background="@drawable/bw_card_bg"
             android:clipToPadding="false"
-            android:paddingBottom="16dp"
-            android:scrollbars="vertical"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:nestedScrollingEnabled="true"
             android:overScrollMode="always"
-            android:focusable="false"
-            android:focusableInTouchMode="false" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@drawable/bw_hairline"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="8dp" />
+            android:padding="12dp"
+            android:scrollbars="vertical" />
 
         <Button
             android:id="@+id/btnPackSave"
             style="@style/ZenButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Pack &amp; Save" />
 
         <ImageView
             android:id="@+id/ivPreview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_marginTop="16dp"
-            android:scaleType="fitCenter"
+            android:layout_weight="1"
             android:background="@drawable/bw_thumb_bg"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
             android:visibility="gone" />
 
         <TextView
@@ -111,8 +98,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:textColor="@color/bw_grey"
             android:fontFamily="monospace"
+            android:textColor="@color/bw_grey"
             android:textSize="12sp"
             android:visibility="gone" />
 
@@ -131,26 +118,25 @@
         android:id="@+id/loadingOverlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
         android:background="@color/bw_black"
+        android:gravity="center"
+        android:orientation="vertical"
         android:visibility="gone">
 
         <ProgressBar
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:indeterminateTint="@color/bw_white" />
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:indeterminateTint="@color/fnf_accent" />
 
         <TextView
             android:id="@+id/tvLoadingLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
             android:text="Packing…"
             android:textColor="@color/bw_white"
-            android:textAllCaps="true"
-            android:letterSpacing="0.08"
-            android:textStyle="bold" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
