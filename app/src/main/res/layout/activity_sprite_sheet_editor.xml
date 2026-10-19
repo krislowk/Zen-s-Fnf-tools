@@ -4,84 +4,113 @@
     android:layout_height="match_parent"
     android:background="@color/bw_black"
     android:fillViewport="true">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="24dp"
+        android:paddingTop="40dp">
+
         <TextView
+            style="@style/ZenHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SPRITESHEET EDITOR"
-            android:textColor="@color/bw_white"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            android:letterSpacing="0.06" />
+            android:layout_marginBottom="8dp"
+            android:text="SpriteSheet Editor" />
+
         <TextView
+            style="@style/ZenBody"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_marginBottom="24dp"
-            android:text="Load a PNG atlas and its TextureAtlas XML. The editor extracts each frame, lets you rename or add images, then rebuilds the atlas and regenerates the frame coordinates."
-            android:textColor="@color/bw_grey"
-            android:textSize="14sp" />
-        <Button
-            android:id="@+id/btnPickSheet"
-            style="@style/ZenButtonOutline"
+            android:text="Load a PNG atlas and its TextureAtlas XML. The editor extracts each frame, lets you rename or add images, then rebuilds the atlas and regenerates the frame coordinates." />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1. Select Spritesheet PNG" />
-        <TextView
-            android:id="@+id/tvSheetStatus"
-            style="@style/ZenBody"
+            android:background="@drawable/bw_card_bg"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/ZenSectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Atlas files" />
+
+            <Button
+                android:id="@+id/btnPickSheet"
+                style="@style/ZenButtonOutline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Select Spritesheet PNG" />
+
+            <TextView
+                android:id="@+id/tvSheetStatus"
+                style="@style/ZenBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="No spritesheet selected" />
+
+            <Button
+                android:id="@+id/btnPickXml"
+                style="@style/ZenButtonOutline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Select Matching XML" />
+
+            <TextView
+                android:id="@+id/tvXmlStatus"
+                style="@style/ZenBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="No XML selected" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="16dp"
-            android:text="No spritesheet selected" />
-        <Button
-            android:id="@+id/btnPickXml"
-            style="@style/ZenButtonOutline"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2. Select Matching XML" />
-        <TextView
-            android:id="@+id/tvXmlStatus"
-            style="@style/ZenBody"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="16dp"
-            android:text="No XML selected" />
-        <Button
-            android:id="@+id/btnAddImages"
-            style="@style/ZenButtonOutline"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="3. Add More PNG Frames (Optional)" />
-        <TextView
-            android:id="@+id/tvAddedStatus"
-            style="@style/ZenBody"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="22dp"
-            android:text="No additional images selected" />
-        <TextView
-            style="@style/ZenBody"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Output filename (without extension)" />
-        <EditText
-            android:id="@+id/etOutputName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:hint="spritesheet_edited"
-            android:singleLine="true"
-            android:textColor="@color/bw_white"
-            android:textColorHint="@color/bw_grey_dim"
-            android:background="@drawable/bw_edittext_underline" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bw_card_bg"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/ZenSectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Extras" />
+
+            <Button
+                android:id="@+id/btnAddImages"
+                style="@style/ZenButtonOutline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Add More PNG Frames (Optional)" />
+
+            <TextView
+                android:id="@+id/tvAddedStatus"
+                style="@style/ZenBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="No additional images selected" />
+
+            <EditText
+                android:id="@+id/etOutputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Output file name (no extension)"
+                android:singleLine="true" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/btnOpenEditor"
             style="@style/ZenButton"
