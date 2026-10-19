@@ -1,12 +1,17 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:bottom="0dp">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
         <shape android:shape="rectangle">
-            <solid android:color="@android:color/transparent" />
+            <solid android:color="@color/bw_surface_high" />
+            <stroke android:width="2dp" android:color="@color/fnf_accent" />
+            <corners android:radius="28dp" />
+            <padding android:left="20dp" android:top="14dp" android:right="20dp" android:bottom="14dp" />
         </shape>
     </item>
-    <item android:height="1dp" android:gravity="bottom">
+    <item>
         <shape android:shape="rectangle">
-            <solid android:color="@color/bw_grey_dim" />
+            <solid android:color="@color/bw_surface" />
+            <corners android:radius="28dp" />
+            <padding android:left="20dp" android:top="14dp" android:right="20dp" android:bottom="14dp" />
         </shape>
     </item>
-</layer-list>
+</selector>
