@@ -8,104 +8,141 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="24dp"
+        android:paddingTop="40dp">
 
         <TextView
             android:id="@+id/tvHeader"
             style="@style/ZenHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Icon Creator"
-            android:layout_marginBottom="6dp" />
+            android:layout_marginBottom="8dp"
+            android:text="Icon Creator" />
 
         <TextView
             android:id="@+id/tvBody"
             style="@style/ZenBody"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pick a normal icon and a losing icon. They get placed side by side on one PNG (2 x size wide, 1 x size tall, e.g. 300 x 150)."
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="24dp"
+            android:text="Pick a normal icon and a losing icon. They get placed side by side on one PNG (2 x size wide, 1 x size tall, e.g. 300 x 150)." />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="@drawable/bw_card_bg"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/ZenSectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Images" />
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_marginEnd="8dp">
+                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btnPickNormal"
-                    style="@style/ZenButtonOutline"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Normal Icon" />
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/ivNormal"
-                    android:layout_width="match_parent"
-                    android:layout_height="110dp"
-                    android:layout_marginTop="10dp"
-                    android:scaleType="fitCenter"
-                    android:background="@drawable/bw_thumb_bg"
-                    android:visibility="gone" />
-            </LinearLayout>
+                    <Button
+                        android:id="@+id/btnPickNormal"
+                        style="@style/ZenButtonOutline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="Normal" />
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_marginStart="8dp">
+                    <ImageView
+                        android:id="@+id/ivNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bw_thumb_bg"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:visibility="gone" />
+                </LinearLayout>
 
-                <Button
-                    android:id="@+id/btnPickLosing"
-                    style="@style/ZenButtonOutline"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Losing Icon" />
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/ivLosing"
-                    android:layout_width="match_parent"
-                    android:layout_height="110dp"
-                    android:layout_marginTop="10dp"
-                    android:scaleType="fitCenter"
-                    android:background="@drawable/bw_thumb_bg"
-                    android:visibility="gone" />
+                    <Button
+                        android:id="@+id/btnPickLosing"
+                        style="@style/ZenButtonOutline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="Losing" />
+
+                    <ImageView
+                        android:id="@+id/ivLosing"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bw_thumb_bg"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:visibility="gone" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
-        <View android:layout_width="match_parent" android:layout_height="1dp"
-            android:background="@drawable/bw_hairline" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" />
-
-        <EditText
-            android:id="@+id/etCellSize"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Size of ONE icon (px, e.g. 150 = 300 x 150 output)"
-            android:text="150"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/etOutputName"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="Output file name (no extension)"
-            android:text="icon-custom" />
+            android:background="@drawable/bw_card_bg"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <CheckBox
-            android:id="@+id/cbCrop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Crop to fill (otherwise fit whole image)"
-            android:textColor="@color/bw_grey" />
+            <TextView
+                style="@style/ZenSectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Output" />
+
+            <EditText
+                android:id="@+id/etCellSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Size of ONE icon (px, 150 = 300 x 150)"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text="150" />
+
+            <EditText
+                android:id="@+id/etOutputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Output file name (no extension)"
+                android:singleLine="true"
+                android:text="icon-custom" />
+
+            <CheckBox
+                android:id="@+id/cbCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Crop to fill (otherwise fit whole image)"
+                android:textColor="@color/bw_grey" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnConvert"
@@ -120,17 +157,18 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="16dp"
-            android:scaleType="fitCenter"
             android:background="@drawable/bw_thumb_bg"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
             android:visibility="gone" />
 
         <TextView
             android:id="@+id/tvSavedInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/bw_grey"
+            android:layout_marginTop="12dp"
             android:fontFamily="monospace"
+            android:textColor="@color/bw_grey"
             android:textSize="12sp"
             android:visibility="gone" />
 
