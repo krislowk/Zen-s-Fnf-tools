@@ -1,10 +1,11 @@
 <resources>
     <style name="Theme.ZenFNFToolkit" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/bw_white</item>
-        <item name="colorOnPrimary">@color/bw_black</item>
-        <item name="colorSecondary">@color/bw_white</item>
-        <item name="colorOnSecondary">@color/bw_black</item>
-        <item name="colorSurface">@color/bw_black</item>
+        <item name="colorPrimary">@color/fnf_accent</item>
+        <item name="colorOnPrimary">@color/fnf_on_accent</item>
+        <item name="colorSecondary">@color/fnf_accent</item>
+        <item name="colorOnSecondary">@color/fnf_on_accent</item>
+        <item name="colorAccent">@color/fnf_accent</item>
+        <item name="colorSurface">@color/bw_panel</item>
         <item name="colorOnSurface">@color/bw_white</item>
         <item name="android:colorBackground">@color/bw_black</item>
         <item name="android:textColorPrimary">@color/bw_white</item>
@@ -13,9 +14,9 @@
         <item name="android:statusBarColor">@color/bw_black</item>
         <item name="android:navigationBarColor">@color/bw_black</item>
         <item name="android:windowAnimationStyle">@style/ZenWindowAnimation</item>
-        <item name="colorControlHighlight">@color/bw_grey_dim</item>
-        <item name="colorControlNormal">@color/bw_white</item>
-        <item name="colorControlActivated">@color/bw_white</item>
+        <item name="colorControlHighlight">@color/bw_surface_high</item>
+        <item name="colorControlNormal">@color/bw_grey</item>
+        <item name="colorControlActivated">@color/fnf_accent</item>
         <item name="editTextStyle">@style/ZenEditText</item>
     </style>
 
@@ -29,46 +30,65 @@
     <style name="ZenEditText" parent="Widget.AppCompat.EditText">
         <item name="android:textColor">@color/bw_white</item>
         <item name="android:textColorHint">@color/bw_grey_dim</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:background">@drawable/bw_edittext_underline</item>
-        <item name="android:paddingTop">12dp</item>
-        <item name="android:paddingBottom">12dp</item>
+        <item name="android:minHeight">52dp</item>
     </style>
 
+    <!-- Filled electric-blue pill -->
     <style name="ZenButton">
         <item name="android:background">@drawable/bw_button_bg</item>
-        <item name="android:textColor">@color/bw_black</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:letterSpacing">0.08</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:paddingTop">16dp</item>
-        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textColor">@color/zen_button_text</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
         <item name="android:stateListAnimator">@null</item>
         <item name="android:elevation">0dp</item>
     </style>
 
+    <!-- Tonal lavender-gray pill -->
     <style name="ZenButtonOutline">
         <item name="android:background">@drawable/bw_button_outline_bg</item>
-        <item name="android:textColor">@color/bw_white</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:letterSpacing">0.08</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:paddingTop">16dp</item>
-        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textColor">@color/zen_button_text</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
         <item name="android:stateListAnimator">@null</item>
         <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="ZenButtonSmall" parent="ZenButtonOutline">
+        <item name="android:minHeight">44dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">18dp</item>
+        <item name="android:paddingRight">18dp</item>
     </style>
 
     <style name="ZenHeader">
         <item name="android:textColor">@color/bw_white</item>
-        <item name="android:textSize">22sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
     </style>
 
     <style name="ZenBody">
         <item name="android:textColor">@color/bw_grey</item>
         <item name="android:textSize">14sp</item>
-        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="ZenSectionLabel">
+        <item name="android:textColor">@color/fnf_accent</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 </resources>
