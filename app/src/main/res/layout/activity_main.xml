@@ -1,63 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@color/bw_black"
-    android:padding="28dp">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/tvLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FNF"
-        android:textColor="@color/bw_white"
-        android:textSize="42sp"
-        android:textStyle="bold"
-        android:letterSpacing="0.15"
-        android:fontFamily="sans-serif-black" />
-
-    <TextView
-        android:id="@+id/tvSubtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TOOLKIT"
-        android:textColor="@color/fnf_accent"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        android:letterSpacing="0.3"
-        android:layout_marginBottom="40dp" />
-
-    <Button
-        android:id="@+id/btnSpritesheetConverter"
-        style="@style/ZenButtonOutline"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
-        android:text="Spritesheet Converter" />
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:paddingTop="56dp">
 
-    <Button
-        android:id="@+id/btnIconGrid"
-        style="@style/ZenButtonOutline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
-        android:text="Icon Creator" />
+        <TextView
+            android:id="@+id/tvLogo"
+            style="@style/ZenHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FNF Toolkit"
+            android:textSize="34sp" />
 
-    <Button
-        android:id="@+id/btnSpriteSheetEditor"
-        style="@style/ZenButtonOutline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
-        android:text="SpriteSheet Editor" />
+        <TextView
+            android:id="@+id/tvSubtitle"
+            style="@style/ZenBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="28dp"
+            android:text="Sprite and icon tools for your mods" />
 
-    <Button
-        android:id="@+id/btnGifToSpritesheet"
-        style="@style/ZenButtonOutline"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GIF to Spritesheet" />
+        <LinearLayout
+            android:id="@+id/btnSpritesheetConverter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bw_card_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="18dp">
 
-</LinearLayout>
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bw_icon_badge"
+                android:padding="12dp"
+                android:src="@drawable/ic_tool_sheet"
+                android:tint="@color/fnf_accent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Spritesheet Converter"
+                    android:textColor="@color/bw_white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/ZenBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Pack frame PNGs into an atlas"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_chevron"
+                android:tint="@color/bw_grey_dim" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnIconGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bw_card_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bw_icon_badge"
+                android:padding="12dp"
+                android:src="@drawable/ic_tool_icon"
+                android:tint="@color/fnf_accent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Icon Creator"
+                    android:textColor="@color/bw_white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/ZenBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Combine two images into a 300 x 150 icon"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_chevron"
+                android:tint="@color/bw_grey_dim" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnSpriteSheetEditor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bw_card_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bw_icon_badge"
+                android:padding="12dp"
+                android:src="@drawable/ic_tool_edit"
+                android:tint="@color/fnf_accent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="SpriteSheet Editor"
+                    android:textColor="@color/bw_white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/ZenBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Edit an existing PNG and XML atlas"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_chevron"
+                android:tint="@color/bw_grey_dim" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnGifToSpritesheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bw_card_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bw_icon_badge"
+                android:padding="12dp"
+                android:src="@drawable/ic_tool_gif"
+                android:tint="@color/fnf_accent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="GIF to Spritesheet"
+                    android:textColor="@color/bw_white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/ZenBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Turn a GIF into an atlas"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_chevron"
+                android:tint="@color/bw_grey_dim" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
