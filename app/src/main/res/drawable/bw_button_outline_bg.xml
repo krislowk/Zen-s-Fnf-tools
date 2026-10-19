@@ -1,16 +1,20 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true">
+    <item android:state_enabled="false">
         <shape android:shape="rectangle">
             <solid android:color="@color/bw_panel" />
-            <stroke android:width="2dp" android:color="@color/fnf_accent" />
-            <corners android:radius="28dp" />
+            <corners android:radius="100dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/bw_surface_high" />
+            <corners android:radius="100dp" />
         </shape>
     </item>
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@color/bw_black" />
-            <stroke android:width="2dp" android:color="@color/fnf_accent" />
-            <corners android:radius="28dp" />
+            <solid android:color="@color/bw_surface" />
+            <corners android:radius="100dp" />
         </shape>
     </item>
 </selector>
