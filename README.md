@@ -1,3 +1,7 @@
+# USE THE APK, I WILL BE UPDATING THE MAIN BRANCH SOON, THE MAIN BRANCH IS OUTDATED!!
+
+# THIS IS ONLY FOR PSYCH ENGINE MODDERS!!
+
 # Zen FNF Toolkit
 
 An all-in-one Android toolkit for Friday Night Funkin' / Psych Engine modders. Everything runs on your phone: sprites, icons, audio and song folders, with a bottom navigation bar (**Tools** and **Settings**) and a theme you can customize.
